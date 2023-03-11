@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "ddf1014a-dc1b-421e-a87a-718339da47b5",
+		"name": "Daniel'sAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12660293"
+	},
+	"item": [
+		{
+			"name": "UserAuth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"daniel\",\r\n    \"password\": \"daniels\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/user/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLocations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/company/locations",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"company",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmissionByCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/invoice/emission",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"invoice",
+						"emission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmissionByCompanyLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1,\r\n    \"location_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/invoice/emissionlocation",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"invoice",
+						"emissionlocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getScopeByCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/invoice/emissionscope",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"invoice",
+						"emissionscope"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getScopeByCompanyLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1,\r\n    \"location_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/invoice/emissionscopelocation",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"invoice",
+						"emissionscopelocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmissionGoalByCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/company/emissiongoal",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"company",
+						"emissiongoal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmissionGoalByCompanyLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1,\r\n    \"location_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/company/emissiongoallocation",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"company",
+						"emissiongoallocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTaxByCompany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/invoice/taxcompany",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"invoice",
+						"taxcompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTaxByCompanyLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_id\": 1,\r\n    \"location_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5003/invoice/taxcompanylocation",
+					"host": [
+						"localhost"
+					],
+					"port": "5003",
+					"path": [
+						"invoice",
+						"taxcompanylocation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
