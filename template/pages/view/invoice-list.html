@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Daidalous</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+  <script src="../../components/header.js" type="text/javascript" defer></script>
+  <script src="../../components/sidebar.js" type="text/javascript" defer></script>
+  <script src="../../components/footer.js" type="text/javascript" defer></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" defer></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" defer></script>
+
+</head>
+
+<body>
+  <div class="container-scroller">
+    <main-header></main-header>
+    <div class="container-fluid page-body-wrapper" style="background-color: #f4f5f7;">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <main-sidebar></main-sidebar>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+            
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link" id="overview-tab" href="overview.html">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="report-list-tab" href="report-list.html">Reports</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active text-primary" id="invoice-list-tab" href="invoice-list.html">Invoices</a>
+                        </li>
+                    </ul>
+                  <div class="card-body">
+                    <div class="row pb-4">
+                        <div class="col pt-3">
+                            <h2 class="fw-bold">Search Invoices</h2>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary btn-sm align-middle" onclick="location.href='invoice-upload.html'">
+                                <div class="media">
+                                    <i class="mdi mdi-upload d-flex align-self-center me-1"></i> 
+                                    <div class="media-body">
+                                        &nbsp;&nbsp; Upload Invoice
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>  
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <select class="form-control js-example-basic-single w-100" style="height: 50.8px;">
+                                <option selected>Vendor Name</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AM">America</option>
+                                <option value="CA">Canada</option>
+                                <option value="RU">Russia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <div class="input-group date" id="datepicker">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Date" aria-label="Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Filename" aria-label="Filename">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-inverse-primary btn-rounded btn-sm d-flex justify-content-evenly">
+                                <i class="icon-search"></i>
+                                &nbsp;&nbsp; Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>Vendor</th>
+                            <th>Ref. No.</th>
+                            <th>Invoice Date</th>
+                            <th>Category</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="#" class="link-primary">GigaDevice-Feb-2022-UBI</a></td>
+                            <td><a href="#" class="link-dark"><i class="mdi mdi-download"></i></a></td>
+                            <td>Gigadevice</td>
+                            <td>K98772h</td>
+                            <td>02-06-2023 08:30</td>
+                            <td>Computer & Technical Services</td>
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="link-primary">QZing-Tech-Feb-2022-UBI</a></td>
+                            <td><a href="#" class="link-dark"><i class="mdi mdi-download"></i></a></td>
+                            <td>QZing Tech</td>
+                            <td>K83982e</td>
+                            <td>28-05-2023 08:30</td>
+                            <td>Computer & Technical Services</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <main-footer></main-footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script src="../../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/select2.js"></script>
+  <!-- End custom js for this page-->
+  <script type="text/javascript">
+    $(function() {
+        $('#datepicker').datepicker()
+    });
+    </script>
+</body>
+
+</html>
