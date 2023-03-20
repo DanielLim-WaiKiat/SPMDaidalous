@@ -4,6 +4,7 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  <link rel="icon" href="../../images/logo-mini.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Daidalous</title>
   <!-- plugins:css -->
@@ -49,10 +50,10 @@
                 <div class="card">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                          <a class="nav-link active text-primary" id="overview-tab" href="overview.html">Overview</a>
+                          <a class="nav-link" id="overview-tab" href="overview.html">Overview</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" id="report-list-tab" href="report-list.html">Reports</a>
+                          <a class="nav-link active text-primary" id="report-list-tab" href="report-list.html">Reports</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" id="invoice-list-tab" href="invoice-list.html">Invoices</a>
@@ -61,8 +62,75 @@
                   <div class="card-body">
                     <div class="row pb-4">
                         <div class="col pt-3">
-                            <h2 class="fw-bold">Overview</h2>
+                            <h2 class="fw-bold">Search Reports</h2>
                         </div>
+                        <div class="col d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary btn-sm align-middle">
+                                <div class="media">
+                                    <i class="mdi mdi-plus d-flex align-self-center me-1"></i> 
+                                    <div class="media-body">
+                                        &nbsp;&nbsp; Create New Report
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <select class="form-control js-example-basic-single">
+                                <option selected>Report Status</option>
+                                <option value="submitted">Submitted</option>
+                                <option value="auditing">Auditing</option>
+                                <option value="pending">Pending</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <div class="input-group date" id="datepicker">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Report Date" aria-label="Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Filename" aria-label="Filename">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn btn-inverse-primary btn-rounded btn-sm d-flex justify-content-evenly">
+                                <i class="icon-search"></i>
+                                &nbsp;&nbsp; Search
+                            </button>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>File</th>
+                            <th>Ref. No.</th>
+                            <th>Last Modified</th>
+                            <th>Report Status</th>
+                            <th>Last Comment</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="#" class="link-primary">2021-Report-UBI</a></td>
+                            <td><a href="#" class="link-dark"><i class="mdi mdi-download"></i></a></td>
+                            <td>L39204</td>
+                            <td>28-05 -2023 08:30</td>
+                            <td class="text-success"><i class="mdi mdi-check-circle me-2"></i>Submitted</td>
+                            <td>Audited by KPMG</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
