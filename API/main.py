@@ -72,6 +72,9 @@ def get_tax_by_company():
 def get_tax_by_company_location():
     return InvoiceController.get_tax_by_company_location(request)
 
+@app.route("/invoice/insertinvoiceviadummy", methods=["POST"])
+def insert_invoice_via_dummy():
+    return InvoiceController.insert_invoice_via_dummy(request)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5003, debug=True)
