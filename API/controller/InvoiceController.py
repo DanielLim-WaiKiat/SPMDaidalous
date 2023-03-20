@@ -1,6 +1,9 @@
 from model.Invoice import Invoice
 from flask import jsonify
 from config import app, db
+from controller.CompanyController2 import CompanyController2
+from controller.SupplierController import SupplierController
+from controller.CompanyController import CompanyController
 import datetime
 
 class InvoiceController():
@@ -328,3 +331,56 @@ class InvoiceController():
                     "data": "Data format error"
                 }
             )
+
+    def insert_invoice_via_dummy(request):
+        data = request.get_json()
+        company_name = data["company_name"]
+        supplier_name = data["supplier_name"]
+        loc_name = data["location_name"]
+        invoice_category = data["invoice_category"]
+        invoice_number = data["invoice_number"]
+        invoice_date = data["invoice_date"]
+        payment_method = data["payment_method"]
+        total_amount = data["total_amount"]
+        emission_amount = 20 #placeholder value for emission until we come up with emission calculation function
+        
+        try:
+            company_id = CompanyController2.get_company_id_by_name(company_name).get_json()
+            cid = company_id["data"]
+            supplier_id = SupplierController.get_supplier_id_by_name(supplier_name).get_json()
+            sid = supplier_id["data"]
+            location_id = CompanyController.get_location_id_by_locationname_companyid(loc_name, cid).get_json()
+            lid = location_id["data"]
+            print(f'company id: {cid}, supplier id: {sid}, location id: {lid}')
+            print(invoice_category, invoice_number, invoice_date, payment_method, total_amount, sid, emission_amount,cid,lid)
+            newInvoice = Invoice(
+                            invoice_id=None,
+                            invoice_category=invoice_category,
+                            invoice_number=invoice_number,
+                            invoice_date=invoice_date,
+                            payment_method=payment_method,
+                            total_amount=total_amount,
+                            supplier_id=sid,
+                            # emission_amount=emission_amount,
+                            image_path=None,
+                            company_id=cid,
+                            location_id=lid
+                        )
+            db.session.add(newInvoice)
+            db.session.commit()
+            return jsonify({
+                "code": 200,
+                "data": "Successful"
+            })
+
+        except Exception as error:
+            print(error)
+            return jsonify(
+                {
+                    "code": 500,
+                    "data": "Data format error"
+                    
+                }
+            )
+        # get supplier_id
+        # get location_id

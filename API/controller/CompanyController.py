@@ -117,3 +117,39 @@ class CompanyController():
                     "data": "Data format error"
                 }
             )
+        
+    def get_location_id_by_locationname_companyid(locname, company_id):
+        try:
+            if len(locname) > 0 and company_id > 0:
+                try:
+                    print(locname, company_id)
+                    location = CompanyLocations.query.filter_by(location_name=locname, company_id=company_id).first()
+                    print(f'here {location.location_id}')
+                    if location == None:
+                        return jsonify({
+                            "code": 404,
+                            "status": False,
+                            "data": "Location ID not found"
+                        })
+                    else:
+                        return jsonify({
+                            "code": 200,
+                            "data": location.location_id
+                        })
+
+                except Exception as error:
+                    print(error)
+                    return jsonify(
+                        {
+                            "code": 500,
+                            "data": "Location error. Please contact the administrator"
+                        }
+                    )
+        except Exception as error:
+            print(error)
+            return jsonify(
+                {
+                    "code": 500,
+                    "data": "Data format error"
+                }
+            )
