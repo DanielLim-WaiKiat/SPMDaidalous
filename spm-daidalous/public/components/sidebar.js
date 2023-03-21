@@ -29,6 +29,8 @@ class Sidebar extends HTMLElement {
               <i class="menu-icon mdi mdi-file-document"></i>
               <span class="menu-title">Documentation</span>
             </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
               <i class="menu-icon mdi mdi-headset"></i>
               <span class="menu-title">Support</span>
